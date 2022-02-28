@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button option1btn,option2btn, option3btn, option4btn;
     private ArrayList<QuizModal> quizModalArrayList;
     Random random;
-    int current_score=0, questionAttempted=1, currentPos;
+    int current_score=0, questionAttempted=1, currentPos=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         quizModalArrayList = new ArrayList<>();
         random = new Random();
         getQuizQuestions(quizModalArrayList);
-        currentPos = random.nextInt(quizModalArrayList.size());
         setDataToViews(currentPos);
 
         option1btn.setOnClickListener(new View.OnClickListener() {
@@ -40,8 +39,10 @@ public class MainActivity extends AppCompatActivity {
                     current_score++;
                 }
                 questionAttempted++;
-                currentPos = random.nextInt(quizModalArrayList.size());
-                setDataToViews(currentPos);
+                currentPos+=1;
+                if(currentPos<quizModalArrayList.size()){
+                    setDataToViews(currentPos);
+                }
             }
         });
         option2btn.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
                     current_score++;
                 }
                 questionAttempted++;
-                currentPos = random.nextInt(quizModalArrayList.size());
-                setDataToViews(currentPos);
+                currentPos+=1;
+                if(currentPos<quizModalArrayList.size()){
+                    setDataToViews(currentPos);
+                }
             }
         });
         option3btn.setOnClickListener(new View.OnClickListener() {
@@ -62,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     current_score++;
                 }
                 questionAttempted++;
-                currentPos = random.nextInt(quizModalArrayList.size());
-                setDataToViews(currentPos);
+                currentPos+=1;
+                if(currentPos<quizModalArrayList.size()){
+                    setDataToViews(currentPos);
+                }
             }
         });
         option4btn.setOnClickListener(new View.OnClickListener() {
@@ -73,8 +78,10 @@ public class MainActivity extends AppCompatActivity {
                     current_score++;
                 }
                 questionAttempted++;
-                currentPos = random.nextInt(quizModalArrayList.size());
-                setDataToViews(currentPos);
+                currentPos+=1;
+                if(currentPos<quizModalArrayList.size()){
+                    setDataToViews(currentPos);
+                }
             }
         });
 

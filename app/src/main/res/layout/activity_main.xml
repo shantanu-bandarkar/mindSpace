@@ -24,11 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tvAttemptedQ"
         android:layout_marginTop="30dp"
+        android:gravity="center"
         android:text="Question"
         android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="25sp" />
 
 
     <LinearLayout
