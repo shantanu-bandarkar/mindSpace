@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPage"
+    android:padding="10dp"
+    android:background="#40FFEAA7">
+
+    <TextView
+        android:id="@+id/greetingMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Welcome to mindSpace!"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textColor="#6c5ce7"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/greetingQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How are you doing?"
+        android:layout_below="@id/greetingMessage"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_marginTop="15dp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/takeTestBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greetingQuestion"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/happyTheme"
+        android:paddingHorizontal="50dp"
+        android:text="Take Test"
+        android:textSize="30dp"
+        ></Button>
+
+    <TextView
+        android:id="@+id/landingPageQuote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/takeTestBtn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Smile, breathe, and go slowly 😊"
+        android:textAlignment="center"
+        android:textSize="25dp"></TextView>
+
+    <TextView
+        android:id="@+id/suggestionContainerHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/landingPageQuote"
+        android:text="Suggestions"
+        android:textAlignment="center"
+        android:textSize="30dp">
+
+    </TextView>
+    <TableLayout
+        android:id="@+id/suggestionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/suggestionContainerHeading"
+        android:layout_margin="20dp"
+        android:stretchColumns="0, 1"
+        >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:text="Read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fdcb6e"
+                android:padding="15dip"
+                android:textColor="#2d3436"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                >
+            </TextView>
+            <TextView
+
+                android:text="Listen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fdcb6e"
+                android:textColorHint=""
+                android:padding="15dip"
+                android:textColor="#2d3436"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="25dp"
+                android:textAlignment="center">
+            </TextView>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+
+                android:text="Meditate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fdcb6e"
+                android:padding="15dip"
+                android:textColor="#2d3436"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                >
+            </TextView>
+            <TextView
+                android:text="Breathe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fdcb6e"
+                android:padding="15dip"
+                android:textColor="#2d3436"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="25dp"
+                android:textAlignment="center">
+            </TextView>
+        </TableRow>
+    </TableLayout>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Suggestions->"
+        android:layout_below="@id/suggestionContainer"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        >
+    </Button>
+</RelativeLayout>
