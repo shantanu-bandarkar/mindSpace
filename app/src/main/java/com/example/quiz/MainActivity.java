@@ -2,6 +2,7 @@ package com.example.quiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,12 +12,12 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView questionTV,questionNumTV;
     private Button option1btn,option2btn, option3btn, option4btn;
     private ArrayList<QuizModal> quizModalArrayList;
     Random random;
-    int current_score=0, questionAttempted=1, currentPos=0;
+    int current_score=0, questionAttempted=0, currentPos=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,58 +33,10 @@ public class MainActivity extends AppCompatActivity {
         getQuizQuestions(quizModalArrayList);
         setDataToViews(currentPos);
 
-        option1btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(quizModalArrayList.get(currentPos).getAnswer().trim().toLowerCase(Locale.ROOT).equals(option1btn.getText().toString().trim().toLowerCase(Locale.ROOT))){
-                    current_score++;
-                }
-                questionAttempted++;
-                currentPos+=1;
-                if(currentPos<quizModalArrayList.size()){
-                    setDataToViews(currentPos);
-                }
-            }
-        });
-        option2btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(quizModalArrayList.get(currentPos).getAnswer().trim().toLowerCase(Locale.ROOT).equals(option2btn.getText().toString().trim().toLowerCase(Locale.ROOT))){
-                    current_score++;
-                }
-                questionAttempted++;
-                currentPos+=1;
-                if(currentPos<quizModalArrayList.size()){
-                    setDataToViews(currentPos);
-                }
-            }
-        });
-        option3btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(quizModalArrayList.get(currentPos).getAnswer().trim().toLowerCase(Locale.ROOT).equals(option3btn.getText().toString().trim().toLowerCase(Locale.ROOT))){
-                    current_score++;
-                }
-                questionAttempted++;
-                currentPos+=1;
-                if(currentPos<quizModalArrayList.size()){
-                    setDataToViews(currentPos);
-                }
-            }
-        });
-        option4btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(quizModalArrayList.get(currentPos).getAnswer().trim().toLowerCase(Locale.ROOT).equals(option4btn.getText().toString().trim().toLowerCase(Locale.ROOT))){
-                    current_score++;
-                }
-                questionAttempted++;
-                currentPos+=1;
-                if(currentPos<quizModalArrayList.size()){
-                    setDataToViews(currentPos);
-                }
-            }
-        });
+        option1btn.setOnClickListener(this);
+        option2btn.setOnClickListener(this);
+        option3btn.setOnClickListener(this);
+        option4btn.setOnClickListener(this);
 
     }
     private void setDataToViews(int currentPos){
@@ -106,5 +59,33 @@ public class MainActivity extends AppCompatActivity {
         quizModalArrayList.add(new QuizModal("I have trouble making even simple decisions.","Not at all","somewhat","qiute a lot","very much","very much"));
         quizModalArrayList.add(new QuizModal("Sometimes I just feel “bone tired” no matter how much sleep I get.","Not at all","somewhat","qiute a lot","very much","very much"));
         quizModalArrayList.add(new QuizModal("Some days I feel like I just can’t do anything right.","Not at all","somewhat","qiute a lot","very much","very much"));
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.btnOpt1:
+                current_score+=1;
+                break;
+            case R.id.btnOpt2:
+                current_score+=2;
+                break;
+            case R.id.btnOpt3:
+                current_score+=3;
+                break;
+            case R.id.btnOpt4:
+                current_score+=4;
+                break;
+        }
+        questionAttempted++;
+        currentPos+=1;
+        if(questionAttempted==quizModalArrayList.size()){
+            Intent i = new Intent(MainActivity.this,Score_page.class);
+            i.putExtra("score",String.valueOf(current_score));
+            startActivity(i);
+        }
+        if(currentPos<quizModalArrayList.size()){
+            setDataToViews(currentPos);
+        }
     }
 }
