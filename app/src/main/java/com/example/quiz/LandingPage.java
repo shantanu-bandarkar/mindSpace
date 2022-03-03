@@ -15,7 +15,6 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        takeTestBtn.setBackgroundColor(Color.parseColor("R.color.happyTheme"));
 
         takeTestBtn = (Button) findViewById(R.id.takeTestBtn);
         takeTestBtn.setOnClickListener(new View.OnClickListener() {
