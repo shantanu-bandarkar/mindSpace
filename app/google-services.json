@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1033577556263",
+    "project_id": "mindspace-c7135",
+    "storage_bucket": "mindspace-c7135.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033577556263:android:57938b1041c47e615f6102",
+        "android_client_info": {
+          "package_name": "com.example.mindspace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033577556263-7r7aktroemkmjal4rofi38slh5svh5ro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvQViomt4N_e5yah35epe1y-kva1AsRe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033577556263-7r7aktroemkmjal4rofi38slh5svh5ro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033577556263:android:9281310ff1b921c15f6102",
+        "android_client_info": {
+          "package_name": "com.example.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033577556263-7r7aktroemkmjal4rofi38slh5svh5ro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvQViomt4N_e5yah35epe1y-kva1AsRe8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033577556263-7r7aktroemkmjal4rofi38slh5svh5ro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

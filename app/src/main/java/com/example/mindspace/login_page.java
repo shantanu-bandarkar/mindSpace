@@ -1,4 +1,4 @@
-package com.example.quiz;
+package com.example.mindspace;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -24,23 +24,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Score"
-            android:textSize="50dp"
-            android:textStyle="bold" />
+            android:textSize="50sp"
+            android:textStyle="bold"/>
 
-        <EditText
+        <TextView
             android:id="@+id/Score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:text="54"
-            android:textSize="50dp" />
+            android:textSize="50sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="moderate"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/quotes"
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="DESCRIPTION"
-            android:textSize="100px" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/button"
@@ -75,8 +75,9 @@
             android:layout_height="50dp"
             android:layout_below="@+id/description"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="-2dp"
-            android:text="Explore" />
+            android:layout_marginTop="2dp"
+            android:text="Explore"
+            android:textSize="15sp"/>
     </RelativeLayout>
 
 
@@ -102,11 +103,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:text="all suggestion"
+            android:text="All Suggestion"
             android:textAllCaps="false"
             android:textAlignment="center" />
     </RelativeLayout>
-
-
 
 </RelativeLayout>

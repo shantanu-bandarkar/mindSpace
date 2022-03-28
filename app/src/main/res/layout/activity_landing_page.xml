@@ -17,9 +17,7 @@
         android:text="Welcome to mindSpace!"
         android:textAlignment="center"
         android:textSize="36sp"
-        android:textColor="#6c5ce7"
-        >
-
+        android:textColor="#6c5ce7">
     </TextView>
 
     <TextView
@@ -32,7 +30,6 @@
         android:textAlignment="center"
         android:textSize="24sp"
         android:layout_marginTop="15dp">
-
     </TextView>
 
     <Button
@@ -41,28 +38,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/greetingQuestion"
         android:layout_centerInParent="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+       android:layout_margin="20dp"
         android:background="@color/happyTheme"
         android:paddingHorizontal="50dp"
-        android:text="Take Test"
-        android:textSize="30dp"
-        ></Button>
+        android:text="Take a Test"
+        android:textAllCaps="false"
+        android:textSize="30sp">
+    </Button>
 
     <TextView
         android:id="@+id/landingPageQuote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/takeTestBtn"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
         android:text="Smile, breathe, and go slowly 😊"
         android:textAlignment="center"
-        android:textSize="25dp"></TextView>
+        android:textSize="25sp">
+    </TextView>
 
     <TextView
         android:id="@+id/suggestionContainerHeading"
@@ -71,9 +64,9 @@
         android:layout_below="@id/landingPageQuote"
         android:text="Suggestions"
         android:textAlignment="center"
-        android:textSize="30dp">
-
+        android:textSize="30sp">
     </TextView>
+
     <TableLayout
         android:id="@+id/suggestionContainer"
         android:layout_width="match_parent"
@@ -91,42 +84,43 @@
                 android:text="Read"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fdcb6e"
-                android:padding="15dip"
-                android:textColor="#2d3436"
+                android:background="@color/happyTheme"
+                android:padding="15dp"
+                android:textColor="@color/Gunmetal"
                 android:layout_marginHorizontal="10dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 >
             </TextView>
-            <TextView
 
+            <TextView
                 android:text="Listen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fdcb6e"
+                android:background="@color/happyTheme"
                 android:padding="15dp"
-                android:textColor="#2d3436"
+                android:textColor="@color/Gunmetal"
                 android:layout_marginHorizontal="10dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textAlignment="center">
             </TextView>
+
         </TableRow>
+
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             >
             <TextView
-
                 android:text="Meditate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fdcb6e"
-                android:padding="15dip"
-                android:textColor="#2d3436"
+                android:background="@color/happyTheme"
+                android:padding="15dp"
+                android:textColor="@color/Gunmetal"
                 android:layout_marginHorizontal="10dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textAlignment="center"
                 >
             </TextView>
@@ -134,9 +128,9 @@
                 android:text="Breathe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#fdcb6e"
-                android:padding="15dip"
-                android:textColor="#2d3436"
+                android:background="@color/happyTheme"
+                android:padding="15dp"
+                android:textColor="@color/Gunmetal"
                 android:layout_marginHorizontal="10dp"
                 android:textSize="25dp"
                 android:textAlignment="center">

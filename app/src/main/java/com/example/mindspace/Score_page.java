@@ -1,13 +1,13 @@
-package com.example.quiz;
+package com.example.mindspace;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
+import android.widget.TextView;
 
 public class Score_page extends AppCompatActivity {
-    private EditText displayscore;
+    private TextView displayscore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

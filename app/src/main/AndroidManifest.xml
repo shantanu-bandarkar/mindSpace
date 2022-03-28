@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.quiz">
+    package="com.example.mindspace">
 
     <application
         android:allowBackup="true"
@@ -10,23 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz">
         <activity
-            android:name=".Score_page"
+            android:name="com.example.mindspace.Score_page"
             android:exported="false" />
         <activity
-            android:name=".login_page"
+            android:name="com.example.mindspace.login_page"
             android:exported="false" />
         <activity
-            android:name=".LandingPage"
+            android:name="com.example.mindspace.LandingPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.mindspace.MainActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>

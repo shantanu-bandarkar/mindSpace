@@ -1,4 +1,4 @@
-package com.example.quiz;
+package com.example.mindspace;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -80,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         questionAttempted++;
         currentPos+=1;
         if(questionAttempted==quizModalArrayList.size()){
+            finish();
             Intent i = new Intent(MainActivity.this,Score_page.class);
             i.putExtra("score",String.valueOf(current_score));
             startActivity(i);
