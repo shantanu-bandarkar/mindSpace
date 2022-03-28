@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class Splash_screen extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 2000;
+    private static int SPLASH_SCREEN = 2500;
 
     Animation anim;
     ImageView img_logo;
@@ -38,7 +38,7 @@ public class Splash_screen extends AppCompatActivity {
             @Override
             public void run() {
                 View view;
-                Intent intent = new Intent(getApplication(), LandingPage.class);
+                Intent intent = new Intent(Splash_screen.this, Login_page.class);
                 startActivity(intent);
                 finish();
             }
