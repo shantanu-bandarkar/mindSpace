@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.FirebaseApp;
@@ -140,8 +141,17 @@ public class SignUp extends AppCompatActivity {
         String email = regEmail.getEditText().getText().toString();
         String phone = regPhone.getEditText().getText().toString();
         String password = regPassword.getEditText().getText().toString();
-        UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
+
+//        Intent intent = new Intent(SignUp.this,VerifyPhone.class);
+//        intent.putExtra("Phone number",phone);
+//        startActivity(intent);
+         UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
         reference.child(username).setValue(helperClass);
 
+        Toast.makeText(this,"Your Account has been created!",Toast.LENGTH_SHORT).show();
+
+        Intent i = new Intent(SignUp.this,Login_page.class);
+        startActivity(i);
+        finish();
     }
 }
