@@ -147,7 +147,7 @@ public class SignUp extends AppCompatActivity {
         intent.putExtra("Username",username);
         intent.putExtra("Email",email);
         intent.putExtra("Password",password);
-        intent.putExtra("Phone number",phone);
+        intent.putExtra("Phone",phone);
         startActivity(intent);
         //UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
        // reference.child(username).setValue(helperClass);
