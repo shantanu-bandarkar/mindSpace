@@ -3,12 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/bhosa/AndroidStudioProjects/code/mindSpace/app/src/main/res/layout/activity_landing_page.xml" value="0.22083333333333333" />
-        <entry key="..\:/Users/bhosa/AndroidStudioProjects/code/mindSpace/app/src/main/res/layout/activity_score_page.xml" value="0.22083333333333333" />
-        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_landing_page.xml" value="0.1" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/drawable/bg_gradient.xml" value="0.1285" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/drawable/ic_launcher_background.xml" value="0.126" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/drawable/splash_background.xml" value="0.1285" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_landing_page.xml" value="0.2" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_login_page.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_score_page.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_sign_up.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_splash_screem.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_splash_screen.xml" value="0.19537037037037036" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/activity_verify_phone.xml" value="0.25" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/layout/score_bottom_sheet.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.126" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindSpace.xml" value="0.126" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindSpace_icon.xml" value="0.1285" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindspace.xml" value="0.1285" />
       </map>
     </option>
   </component>

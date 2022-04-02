@@ -142,16 +142,17 @@ public class SignUp extends AppCompatActivity {
         String phone = regPhone.getEditText().getText().toString();
         String password = regPassword.getEditText().getText().toString();
 
-//        Intent intent = new Intent(SignUp.this,VerifyPhone.class);
-//        intent.putExtra("Phone number",phone);
-//        startActivity(intent);
-         UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
-        reference.child(username).setValue(helperClass);
+        Intent intent = new Intent(SignUp.this,VerifyPhone.class);
+        intent.putExtra("Name",name);
+        intent.putExtra("Username",username);
+        intent.putExtra("Email",email);
+        intent.putExtra("Password",password);
+        intent.putExtra("Phone number",phone);
+        startActivity(intent);
+        //UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
+       // reference.child(username).setValue(helperClass);
 
-        Toast.makeText(this,"Your Account has been created!",Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(this,"Your Account has been created!",Toast.LENGTH_SHORT).show();
 
-        Intent i = new Intent(SignUp.this,Login_page.class);
-        startActivity(i);
-        finish();
     }
 }
