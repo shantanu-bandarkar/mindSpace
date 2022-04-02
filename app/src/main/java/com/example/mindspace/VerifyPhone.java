@@ -48,10 +48,10 @@ public class VerifyPhone extends AppCompatActivity {
         progressBar = findViewById(R.id.prg_bar);
 
          username = getIntent().getStringExtra("Username");
-         name = getIntent().getStringExtra("name");
-         email = getIntent().getStringExtra("email");
-         password = getIntent().getStringExtra("password");
-         phoneNumber = getIntent().getStringExtra("phone");
+         name = getIntent().getStringExtra("Name");
+         email = getIntent().getStringExtra("Email");
+         password = getIntent().getStringExtra("Password");
+         phoneNumber = getIntent().getStringExtra("Phone");
 
         mAuth = FirebaseAuth.getInstance();
         sendVerificationCodetoUser(phoneNumber);
