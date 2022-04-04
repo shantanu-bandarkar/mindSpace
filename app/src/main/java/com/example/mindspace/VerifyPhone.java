@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -66,7 +65,7 @@ public class VerifyPhone extends AppCompatActivity {
                         .setCallbacks(mCallbacks)          // OnVerificationStateChangedCallbacks
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
-        Toast.makeText(VerifyPhone.this,"otp sent",Toast.LENGTH_SHORT).show();
+        Toast.makeText(VerifyPhone.this,"Sending OTP",Toast.LENGTH_SHORT).show();
 
     }
 
@@ -76,6 +75,7 @@ public class VerifyPhone extends AppCompatActivity {
         public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
            final String code = phoneAuthCredential.getSmsCode();
             if(code!=null){
+                otp.setText(code);
                 progressBar.setVisibility(View.VISIBLE);
                 verifyCode(code);
             }
@@ -93,11 +93,11 @@ public class VerifyPhone extends AppCompatActivity {
             verficationCodeBySystem = s;
         }
     };
-
-    public void setotp(View view) {
+    public void setOTP(View view) {
         if (TextUtils.isEmpty(otp.getText().toString())) {
             Toast.makeText(this, "Wrong OTP", Toast.LENGTH_SHORT).show();
-        } else
+        }
+        else
             verifyCode(otp.getText().toString());
     }
 
@@ -112,7 +112,9 @@ public class VerifyPhone extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent i = new Intent(VerifyPhone.this,LandingPage.class);
+                    storedataofnewuser();
+                    Toast.makeText(VerifyPhone.this,"User Created!",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(VerifyPhone.this,Login_page.class);
                     i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(i);
                     finish();
@@ -132,4 +134,6 @@ public class VerifyPhone extends AppCompatActivity {
         reference.child(username).setValue(helperClass);
 
     }
+
+
 }
