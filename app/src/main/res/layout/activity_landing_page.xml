@@ -38,13 +38,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/greetingQuestion"
         android:layout_centerInParent="true"
-       android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/happyTheme"
         android:paddingHorizontal="50dp"
         android:text="Take a Test"
         android:textAllCaps="false"
-        android:textSize="30sp">
-    </Button>
+        android:textSize="30sp"></Button>
 
     <TextView
         android:id="@+id/landingPageQuote"
@@ -94,7 +96,8 @@
             </TextView>
 
             <TextView
-                android:text="Listen"
+                android:text="Contacts"
+                android:id="@+id/contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/happyTheme"

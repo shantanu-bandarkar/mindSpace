@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz">
         <activity
+            android:name=".Contacts.Make_Call"
+            android:exported="false" />
+        <activity
+            android:name=".DB_handler"
+            android:exported="false" />
+        <activity
+            android:name=".Contacts.Add_contact"
+            android:exported="false" />
+        <activity
             android:name=".VerifyPhone"
             android:exported="false" />
         <activity
