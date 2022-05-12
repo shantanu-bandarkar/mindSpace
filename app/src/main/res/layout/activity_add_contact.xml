@@ -13,7 +13,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Add Contacts"
+        android:fontFamily="@font/allura"
+        android:text="Contacts"
         android:textColor="@color/orange"
         android:textSize="40sp" />
 
@@ -29,15 +30,15 @@
 
 
     <EditText
+        android:id="@+id/number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Contact Number"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="25dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/number"
         android:layout_below="@+id/name"
-        />
+        android:inputType="phone"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:hint="Contact Number"
+        android:textSize="25dp" />
 
     <Button
         android:id="@+id/btn_Insert"
