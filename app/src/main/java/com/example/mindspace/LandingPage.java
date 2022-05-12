@@ -12,7 +12,7 @@ import com.example.mindspace.Contacts.Add_contact;
 
 public class LandingPage extends AppCompatActivity {
     Button takeTestBtn;
-    TextView contacts;
+    TextView contacts,articles;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,7 @@ public class LandingPage extends AppCompatActivity {
 
         takeTestBtn = findViewById(R.id.takeTestBtn);
         contacts =  findViewById(R.id.contact);
+        articles = findViewById(R.id.read);
 
         takeTestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +34,13 @@ public class LandingPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(LandingPage.this, Add_contact.class);
+                startActivity(i);
+            }
+        });
+        articles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LandingPage.this, AllArticles.class);
                 startActivity(i);
             }
         });

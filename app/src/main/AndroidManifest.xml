@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz">
         <activity
+            android:name=".AllArticles"
+            android:exported="false" />
+        <activity
             android:name=".Contacts.Make_Call"
             android:exported="false" />
         <activity

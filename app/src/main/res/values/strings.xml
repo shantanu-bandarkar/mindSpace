@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">mindspace</string>
+    <string name="article1"><a href="https://www.scotthyoung.com/blog/2006/09/29/introduction-emotional-mastery-series/">Emotional Mastery</a></string>
+    <string name="article2"><a href="https://www.scotthyoung.com/blog/2018/08/27/richard-feynman-on-expectations/">Self Doubt</a></string>
+    <string name="article3"><a href="https://www.scotthyoung.com/blog/2009/01/19/how-im-learning-to-stop-worrying/">Stop Worrying</a></string>
+
 </resources>
