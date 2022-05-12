@@ -48,15 +48,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
     private void getQuizQuestions(ArrayList<QuizModal> quizModalArrayList) {
-        quizModalArrayList.add(new QuizModal("Can you tell us about your sleep over the last few weeks ?","I have been sleeping more than usual","I have been sleeping less than usual","I have been sleeping less than usual","I haven't noticed any changes"));
-        quizModalArrayList.add(new QuizModal("How has your apetite been over the last few weeks?","I had larger apetite","I had smaller apetite","I have skipped meals.","I haven't noticed"));
+        quizModalArrayList.add(new QuizModal("Can you tell us about your sleep over the last few weeks ?","I haven't noticed any changes","I have been sleeping more than usual","I have been sleeping less than usual","I'm unable to sleep"));
+        quizModalArrayList.add(new QuizModal("Poor appetite or overeating?","Not at all","somewhat","qiute a lot","very much"));
         quizModalArrayList.add(new QuizModal("Have you been less active than usual?","Not really","maybe a little","quite a bit","alot"));
         quizModalArrayList.add(new QuizModal("I'm not interested in doing things I used to enjoy before.","Strongly disagree","Disagree","Agree","Strongly Agree"));
-        quizModalArrayList.add(new QuizModal("How are you doing?","Well!","Just fine","Poor","Never felt this better"));
+        quizModalArrayList.add(new QuizModal("How are you doing?","Well!","Just fine","Poor","Never felt this low"));
         quizModalArrayList.add(new QuizModal("I have difficulty concentrating and focusing on tasks.","Not at all","somewhat","qiute a lot","very much"));
         quizModalArrayList.add(new QuizModal("I feel restless sometimes, like I can’t stop moving.","Not at all","somewhat","qiute a lot","very much"));
         quizModalArrayList.add(new QuizModal("I have trouble making even simple decisions.","Not at all","somewhat","qiute a lot","very much"));
-        quizModalArrayList.add(new QuizModal("Sometimes I just feel “bone tired” no matter how much sleep I get.","Not at all","somewhat","qiute a lot","very much"));
+        quizModalArrayList.add(new QuizModal("How often have you been bothered by feeling down, depressed or hopeless?","Not at all","Several days","Half the days","Nearly Every day"));
         quizModalArrayList.add(new QuizModal("Some days I feel like I just can’t do anything right.","Not at all","somewhat","qiute a lot","very much"));
     }
 
@@ -64,16 +64,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btnOpt1:
-                current_score+=1;
+                current_score+=4;
                 break;
             case R.id.btnOpt2:
-                current_score+=2;
-                break;
-            case R.id.btnOpt3:
                 current_score+=3;
                 break;
+            case R.id.btnOpt3:
+                current_score+=2;
+                break;
             case R.id.btnOpt4:
-                current_score+=4;
+                current_score+=1;
                 break;
         }
         questionAttempted++;
