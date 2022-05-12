@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
@@ -35,6 +36,7 @@ public class VerifyPhone extends AppCompatActivity {
     String phone;
     String name,username,email,phoneNumber,password;
     String verficationCodeBySystem;
+    String whatToDo;
     Context context;
 
     @Override
@@ -51,6 +53,7 @@ public class VerifyPhone extends AppCompatActivity {
          email = getIntent().getStringExtra("Email");
          password = getIntent().getStringExtra("Password");
          phoneNumber = getIntent().getStringExtra("Phone");
+         whatToDo = getIntent().getStringExtra("whatToDo");
 
         mAuth = FirebaseAuth.getInstance();
         sendVerificationCodetoUser(phoneNumber);
@@ -112,15 +115,17 @@ public class VerifyPhone extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    storedataofnewuser();
-                    Toast.makeText(VerifyPhone.this,"User Created!",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(VerifyPhone.this,Login_page.class);
-                    i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(i);
-                    finish();
+                    if (whatToDo.equals("updateTheData")){
+                        updatePass();
+                    }
+                    else{
+                        storedataofnewuser();
+                    }
                 }
                 else{
-                    Toast.makeText(VerifyPhone.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
+                        Toast.makeText(VerifyPhone.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -133,7 +138,18 @@ public class VerifyPhone extends AppCompatActivity {
         UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
         reference.child(username).setValue(helperClass);
 
+        Toast.makeText(VerifyPhone.this,"User Created!",Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(VerifyPhone.this,Login_page.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(i);
+        finish();
     }
 
+    private void updatePass(){
+        Intent intent = new Intent(VerifyPhone.this,ResetPassword.class);
+        intent.putExtra("phone",phoneNumber);
+        startActivity(intent);
+        finish();
+    }
 
 }

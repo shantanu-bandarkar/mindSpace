@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Quiz">
         <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPass"
+            android:exported="false" />
+        <activity
             android:name=".AllArticles"
             android:exported="false" />
         <activity
