@@ -3,7 +3,7 @@ package com.example.mindspace;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
+//import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -35,9 +35,9 @@ public class VerifyPhone extends AppCompatActivity {
     private FirebaseAuth mAuth;
     String phone;
     String name,username,email,phoneNumber,password;
-    String verficationCodeBySystem;
+    String verificationCodeBySystem;
     String whatToDo;
-    Context context;
+   // Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +93,7 @@ public class VerifyPhone extends AppCompatActivity {
         public void onCodeSent(@NonNull String s,
                                @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s,forceResendingToken);
-            verficationCodeBySystem = s;
+            verificationCodeBySystem = s;
         }
     };
     public void setOTP(View view) {
@@ -105,7 +105,7 @@ public class VerifyPhone extends AppCompatActivity {
     }
 
     private void verifyCode(String codeByUser){
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verficationCodeBySystem,codeByUser);
+        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationCodeBySystem,codeByUser);
         signInUser(credential);
     }
 
