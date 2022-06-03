@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button option1btn,option2btn, option3btn, option4btn;
     private ArrayList<QuizModal> quizModalArrayList;
     Random random;
-    int current_score=0, questionAttempted=0, currentPos=0;
+    int current_score=0, questionAttempted=1, currentPos=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

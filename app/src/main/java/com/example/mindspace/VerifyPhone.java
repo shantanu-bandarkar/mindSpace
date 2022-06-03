@@ -1,5 +1,7 @@
 package com.example.mindspace;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +39,7 @@ public class VerifyPhone extends AppCompatActivity {
     String phone;
     String name,username,email,phoneNumber,password;
     String verificationCodeBySystem;
-    String whatToDo;
+   // String whatToDo;
    // Context context;
 
     @Override
@@ -53,7 +56,7 @@ public class VerifyPhone extends AppCompatActivity {
          email = getIntent().getStringExtra("Email");
          password = getIntent().getStringExtra("Password");
          phoneNumber = getIntent().getStringExtra("Phone");
-         whatToDo = getIntent().getStringExtra("whatToDo");
+      //   whatToDo = getIntent().getStringExtra("whatToDo");
 
         mAuth = FirebaseAuth.getInstance();
         sendVerificationCodetoUser(phoneNumber);
@@ -115,12 +118,12 @@ public class VerifyPhone extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    if (whatToDo.equals("updateTheData")){
-                        updatePass();
-                    }
-                    else{
+//                    if (whatToDo.equals("updateTheData")){
+//                        updatePass();
+//                    }
+                   // else{
                         storedataofnewuser();
-                    }
+                    //}
                 }
                 else{
                     if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
@@ -132,6 +135,7 @@ public class VerifyPhone extends AppCompatActivity {
 
     }
     private void storedataofnewuser() {
+        Log.d("Shss", "storedataofnewuser: ");
         phone = "+91" +phoneNumber;
         FirebaseDatabase rootnode =FirebaseDatabase.getInstance();
         DatabaseReference reference = rootnode.getReference("users");
@@ -145,11 +149,11 @@ public class VerifyPhone extends AppCompatActivity {
         finish();
     }
 
-    private void updatePass(){
-        Intent intent = new Intent(VerifyPhone.this,ResetPassword.class);
-        intent.putExtra("phone",phoneNumber);
-        startActivity(intent);
-        finish();
-    }
+//    private void updatePass(){
+//        Intent intent = new Intent(VerifyPhone.this,ResetPassword.class);
+//        intent.putExtra("phone",phoneNumber);
+//        startActivity(intent);
+//        finish();
+//    }
 
 }

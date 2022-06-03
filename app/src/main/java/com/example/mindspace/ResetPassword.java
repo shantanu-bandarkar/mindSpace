@@ -41,7 +41,7 @@ public class ResetPassword extends AppCompatActivity {
                     reference.child(phone).child("password").setValue(newPass);
                    // String username = reference.child(phone).child("username").get().toString();
 
-                    Toast.makeText(ResetPassword.this, "GG ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ResetPassword.this, "Password Changed ", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(ResetPassword.this,LandingPage.class);
                    // intent.putExtra("username",username);

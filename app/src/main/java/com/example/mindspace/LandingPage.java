@@ -11,8 +11,8 @@ import android.widget.TextView;
 import com.example.mindspace.Contacts.Add_contact;
 
 public class LandingPage extends AppCompatActivity {
-    Button takeTestBtn;
-    TextView contacts,articles,breathe;
+    Button takeTestBtn,all_sugg;
+    TextView contacts,articles,breathe,meditate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,8 @@ public class LandingPage extends AppCompatActivity {
         contacts =  findViewById(R.id.contact);
         articles = findViewById(R.id.read);
         breathe = findViewById(R.id.breathe);
+        all_sugg = findViewById(R.id.more_suggestions);
+        meditate = findViewById(R.id.meditate);
 
         takeTestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,5 +54,22 @@ public class LandingPage extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        meditate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LandingPage.this, Meditation.class);
+                startActivity(i);
+            }
+        });
+
+        all_sugg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(LandingPage.this,suggestions.class);
+                i.putExtra("value",String.valueOf(5));
+                startActivity(i);
+            }
+        });
+
     }
 }

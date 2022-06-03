@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mindspace">
 
     <application
@@ -11,6 +12,9 @@
         android:theme="@style/Theme.Quiz">
         <activity
             android:name=".Breathing"
+            android:exported="false" />
+        <activity
+            android:name=".suggestions"
             android:exported="false" />
         <activity
             android:name=".ResetPassword"
@@ -26,7 +30,14 @@
             android:exported="false" />
         <activity
             android:name=".DB_handler"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".Meditation"
+            android:exported="false"/>
+        <activity
+            android:name=".MusicPlayer"
+            android:exported="false"/>
         <activity
             android:name=".Contacts.Add_contact"
             android:exported="false" />
@@ -44,6 +55,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Score_page"
@@ -53,7 +65,9 @@
             android:exported="false" />
         <activity
             android:name=".LandingPage"
-            android:exported="false" />
+            android:exported="false" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false" />

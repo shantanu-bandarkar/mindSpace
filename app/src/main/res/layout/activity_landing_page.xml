@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".LandingPage"
     android:padding="10dp"
-    android:background="#40FFEAA7">
+    android:background="@color/theme">
 
     <TextView
         android:id="@+id/greetingMessage"
@@ -24,13 +24,12 @@
         android:id="@+id/greetingQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How are you doing?"
         android:layout_below="@id/greetingMessage"
+        android:layout_marginTop="15dp"
         android:gravity="center"
+        android:text="How are you doing?"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:layout_marginTop="15dp">
-    </TextView>
+        android:textSize="24sp"></TextView>
 
     <Button
         android:id="@+id/takeTestBtn"
@@ -42,11 +41,14 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@color/happyTheme"
         android:paddingHorizontal="50dp"
+        android:backgroundTint="@color/purple_500"
         android:text="Take a Test"
         android:textAllCaps="false"
-        android:textSize="30sp"></Button>
+        android:textColor="@color/white"
+        android:textSize="30sp">
+
+    </Button>
 
     <TextView
         android:id="@+id/landingPageQuote"
@@ -61,6 +63,7 @@
 
     <TextView
         android:id="@+id/suggestionContainerHeading"
+        android:fontFamily="@font/alfa_slab_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/landingPageQuote"
@@ -143,17 +146,21 @@
             </TextView>
         </TableRow>
     </TableLayout>
-    
+
     <Button
+        android:id="@+id/more_suggestions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="More Suggestions->"
         android:layout_below="@id/suggestionContainer"
-        android:layout_margin="20sp"
-        android:textAlignment="center"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="20sp"
         android:gravity="center"
-        android:textSize="20dp"
+        android:text="More Suggestions->"
+        android:backgroundTint="@color/purple_500"
+        android:textAlignment="center"
         android:textAllCaps="false"
-        >
-    </Button>
+        android:textColor="@color/white"
+        android:textSize="20dp"></Button>
 </RelativeLayout>

@@ -94,7 +94,6 @@ public class Login_page extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Login_page.this,ForgetPass.class);
                 startActivity(intent);
-                finish();
             }
         });
 

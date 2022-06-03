@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/theme">
+
 
     <TextView
         android:id="@+id/tvAttemptedQ"
@@ -21,59 +23,61 @@
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
         android:layout_below="@id/tvAttemptedQ"
         android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="Question"
+        android:text="Questions"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp" />
 
 
     <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/tvQuestion"
-       android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQuestion"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
         <Button
             android:id="@+id/btnOpt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/purple_700"
             android:padding="4dp"
             android:text="Option 1"
-            android:textAllCaps="false"
-            android:background="@color/purple_700"/>
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnOpt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/purple_700"
             android:padding="4dp"
             android:text="Option 2"
-            android:textAllCaps="false"
-            android:background="@color/purple_700"/>
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnOpt3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/purple_700"
             android:padding="4dp"
             android:text="Option 3"
-            android:textAllCaps="false"
-            android:background="@color/purple_700"/>
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/btnOpt4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:background="@color/purple_700"
             android:padding="4dp"
             android:text="Option 4"
-            android:textAllCaps="false"
-            android:background="@color/purple_700"/>
+            android:textAllCaps="false" />
     </LinearLayout>
 </RelativeLayout>

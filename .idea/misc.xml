@@ -20,16 +20,22 @@
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindSpace.xml" value="0.126" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindSpace_icon.xml" value="0.1285" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/Quiz/app/src/main/res/mipmap-anydpi-v26/mindspace.xml" value="0.1285" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/drawable/rounded_button.xml" value="0.12" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_add_contact.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_all_articles.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_breathing.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_forget_pass.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_landing_page.xml" value="0.209375" />
-        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_login_page.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_login_page.xml" value="0.16" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_main.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_make_call.xml" value="0.17864583333333334" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_meditation.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_music_player.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_reset_password.xml" value="0.209375" />
-        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_score_page.xml" value="0.25" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_score_page.xml" value="0.18" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_splash_screen.xml" value="0.209375" />
+        <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_suggestions.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/activity_verify_phone.xml" value="0.209375" />
         <entry key="..\:/Users/shantanu/AndroidStudioProjects/mindSpace/app/src/main/res/layout/card.xml" value="0.33" />
       </map>
