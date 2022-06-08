@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 //import android.content.Context;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -39,8 +40,11 @@ public class VerifyPhone extends AppCompatActivity {
     String phone;
     String name,username,email,phoneNumber,password;
     String verificationCodeBySystem;
+
    // String whatToDo;
    // Context context;
+
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,7 +144,8 @@ public class VerifyPhone extends AppCompatActivity {
         FirebaseDatabase rootnode =FirebaseDatabase.getInstance();
         DatabaseReference reference = rootnode.getReference("users");
         UserHelperClass helperClass = new UserHelperClass(name,username,email,phone,password);
-        reference.child(username).setValue(helperClass);
+      //  reference.child(username).setValue(helperClass); username as primary key
+        reference.child(phone).setValue(helperClass);  // phone as primary key
 
         Toast.makeText(VerifyPhone.this,"User Created!",Toast.LENGTH_SHORT).show();
         Intent i = new Intent(VerifyPhone.this,Login_page.class);
